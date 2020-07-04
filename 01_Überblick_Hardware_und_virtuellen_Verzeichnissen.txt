@@ -1,0 +1,62 @@
+Überblick zu den virtuellen Dateisystemen (Debain 8)
+----------------------------------------------------
+
+lspci
+
+lsusb						(mit lsusb -v gibt es mehr informationen)
+
+lsblk
+
+df -hT
+
+lsmod | less
+
+mount 
+
+Welches OS?:
+------------
+
+uname -r
+
+uname -a
+
+lsb_release -a
+
+
+Virtuelles Dateisystem:
+----------------------
+
+/proc						(Das Verzeichnis /proc ist kein Verzeichnis im eigentlichen Sinn, sondern bildet Parameter
+						des Kernels ab und kann dementsprechend auch zur Abfrage des Kernels verwendet werden)
+
+/sys						(Das virtuelle Dateisystem sysfs exportiert, ähnlich dem /proc-System, Informationen
+						über Treibermodule des Kernels in ein für den Benutzer sichtbares Verzeichnis, nämlich /sys)
+
+/dev						(Sowohl physische als auch logische Laufwerke werden unter Linux als Gerätedateien
+						unterhalb von /dev dargestellt)
+
+
+ls /proc
+
+ls /sys
+
+ls /dev							(der separator ist ein /(Slash) => oder ls / wir schauen über das ganze Root Verzeichnis)
+
+cd /proc
+
+man procfs						(zeigt die Hilfe zu /proc an)
+
+cat devices						(zeigt die geladene Hardware und Treiber an)
+
+cat cmdline						(diese Information wurde während des Starts dem Kernel übergeben)
+
+cat modules						(zeigt alle geladenen Kernel Module an)
+
+ls							(zeigt den Inhalt von /proc an)
+
+ls /dev/cdrom						(ist ein symbolic Link)
+
+ls -l /dev/cdrom					(/dev/cdrom -> sr0)
+
+ls /dev/sd*						(zeigt alle Dateien welche mit sd beginnen)
+
