@@ -1,5 +1,5 @@
-Überblick zu den virtuellen Dateisystemen (Debain 8)
-----------------------------------------------------
+Ãœberblick zu den virtuellen Dateisystemen
+-----------------------------------------
 
 lspci
 
@@ -29,10 +29,10 @@ Virtuelles Dateisystem:
 /proc						(Das Verzeichnis /proc ist kein Verzeichnis im eigentlichen Sinn, sondern bildet Parameter
 						des Kernels ab und kann dementsprechend auch zur Abfrage des Kernels verwendet werden)
 
-/sys						(Das virtuelle Dateisystem sysfs exportiert, ähnlich dem /proc-System, Informationen
-						über Treibermodule des Kernels in ein für den Benutzer sichtbares Verzeichnis, nämlich /sys)
+/sys						(Das virtuelle Dateisystem sysfs exportiert, Ã¤hnlich dem /proc-System, Informationen
+						Ã¼ber Treibermodule des Kernels in ein fÃ¼r den Benutzer sichtbares Verzeichnis, nÃ¤mlich /sys)
 
-/dev						(Sowohl physische als auch logische Laufwerke werden unter Linux als Gerätedateien
+/dev						(Sowohl physische als auch logische Laufwerke werden unter Linux als GerÃ¤tedateien
 						unterhalb von /dev dargestellt)
 
 
@@ -40,7 +40,7 @@ ls /proc
 
 ls /sys
 
-ls /dev							(der separator ist ein /(Slash) => oder ls / wir schauen über das ganze Root Verzeichnis)
+ls /dev							(der separator ist ein /(Slash) => oder ls / wir schauen Ã¼ber das ganze Root Verzeichnis)
 
 cd /proc
 
@@ -48,7 +48,7 @@ man procfs						(zeigt die Hilfe zu /proc an)
 
 cat devices						(zeigt die geladene Hardware und Treiber an)
 
-cat cmdline						(diese Information wurde während des Starts dem Kernel übergeben)
+cat cmdline						(diese Information wurde wÃ¤hrend des Starts dem Kernel Ã¼bergeben)
 
 cat modules						(zeigt alle geladenen Kernel Module an)
 
