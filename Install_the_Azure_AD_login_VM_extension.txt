@@ -1,0 +1,22 @@
+az login
+
+az account show
+
+az account list --all --output table
+
+az account set --subscription "MSDN Platforms"
+
+az group create --name myResourceGroup2020 --location westeurope
+
+az vm create \
+    --resource-group myResourceGroup2020 \
+    --name myVM \
+    --image UbuntuLTS \
+    --admin-username tom \
+    --generate-ssh-keys
+
+az vm extension set \
+    --publisher Microsoft.Azure.ActiveDirectory.LinuxSSH \
+    --name AADLoginForLinux \
+    --resource-group myResourceGroup2020 \
+    --vm-name myVM
